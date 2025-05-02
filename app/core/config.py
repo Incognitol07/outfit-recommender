@@ -10,8 +10,6 @@ class Settings(BaseSettings):
     ENVIRONMENT: str = "development"
     DEBUG: bool = ENVIRONMENT == "development"
 
-    DATABASE_URL: str
-
     # JWT and authentication settings
     JWT_SECRET_KEY: str 
 

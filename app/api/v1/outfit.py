@@ -6,7 +6,7 @@ from app.services.recommender import generate_outfit_recommendations
 
 router = APIRouter(prefix="/api/v1")
 
-@router.post("/recommend-outfits", response_model=OutfitResponse)
+@router.post("/recommend", response_model=OutfitResponse)
 def recommend_outfits(payload: OutfitRequest):
     results = generate_outfit_recommendations(
         shirts=payload.shirts,

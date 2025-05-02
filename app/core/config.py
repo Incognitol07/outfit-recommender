@@ -13,8 +13,6 @@ class Settings(BaseSettings):
     # JWT and authentication settings
     JWT_SECRET_KEY: str 
 
-    HF_TOKEN: str
-
     # Other security settings
     ALLOWED_HOSTS: list = ["*"]
     CORS_ORIGINS: list = ["http://localhost:3000", "http://localhost:5173"] if DEBUG else ["*"]  # Add frontend URL if applicable

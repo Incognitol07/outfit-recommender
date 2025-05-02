@@ -1,5 +1,6 @@
 # app/main.py
 
+import time
 from fastapi import (
     FastAPI,
     Request
@@ -46,6 +47,7 @@ app.include_router(outfit_router)
 # Middleware to log route endpoints
 @app.middleware("http")
 async def log_requests(request: Request, call_next):
+    start_time = time.time()
     endpoint = request.url.path
     method = request.method
     client_ip = request.client.host
@@ -53,8 +55,9 @@ async def log_requests(request: Request, call_next):
     logger.info(f"Request: {method} {endpoint} from {client_ip}")
     
     response = await call_next(request)
+    process_time = time.time() - start_time
     
-    logger.info(f"Response: {method} {endpoint} returned {response.status_code}")
+    logger.info(f"Response: {method} {endpoint} returned {response.status_code} in  {process_time:.2f} seconds")
     return response
 
 

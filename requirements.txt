@@ -1,0 +1,9 @@
+fastapi[all]==0.115.12
+SQLAlchemy==2.0.40
+psycopg2-binary==2.9.10 
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+cryptography==42.0.5
+torch==2.7.0
+transformers==4.51.3
+pillow==11.2.1

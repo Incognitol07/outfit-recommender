@@ -27,17 +27,6 @@ pip install -r requirements.txt
 
 ```
 
-### 3. Environment Variables
-
-Create a `.env` file in project root:
-
-```dotenv
-APP_NAME=outfit-recommender
-APP_DESCRIPTION=a web application that recommends outfits based on fashion trends.
-ENVIRONMENT=development
-JWT_SECRET_KEY=myjwtsecretkey
-```
-
 ### 4. Running Locally
 
 ```bash

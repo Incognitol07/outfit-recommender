@@ -1,6 +1,6 @@
 # Outfit Recommender
 
-A machine learning fashion model packaged as an API that can offer recommendations for combinations of outfits to wear
+A machine learning fashion model packaged as an API that can offers recommendations for combinations of outfits to wear
 
 ## 🚀 Quickstart
 
